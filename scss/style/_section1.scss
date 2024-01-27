@@ -1,0 +1,26 @@
+.s-1 {
+    background-color: rgb(244, 173, 173);
+    .container {
+        @extend %smartcontainer;
+
+        @include goflex(row, space-between);
+        height: 600px;
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color: rgb(74, 207, 33);
+            border: 2px solid black;
+            &:hover {
+                background-color: red;
+            }
+            @media (max-width: 1000px) {
+                width: 150px;
+                height: 150px;
+            }
+            @media (max-width: 800px) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
